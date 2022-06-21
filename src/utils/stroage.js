@@ -1,7 +1,7 @@
 export const getItem = key => {
   const data = localStorage.getItem(key)
   try {
-    return JSON.toString(data)
+    return JSON.parse(data)
   } catch (e) {
     return data
   }

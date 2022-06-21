@@ -2,11 +2,10 @@
 
   <div class="login-container">
     <!--导航栏-->
-    <van-nav-bar
-      title="登录"
-      class="page-nav"
-    />
-    <!--    表单组件-->
+    <van-nav-bar title="登录" class="page-nav">
+      <van-icon name="cross" slot="left" @click="$router.back()" />
+    </van-nav-bar>
+    <!--表单组件-->
     <van-form @submit="onSubmit" ref="loginFromDate">
       <van-field
         name="mobile"
@@ -94,6 +93,7 @@ export default {
         console.log(data)
         this.$store.commit('setUser', data.data)
         this.$toast.success('登录成功')
+        this.$router.push('/my')
       } catch (e) {
         if (e.response.status === 400) {
           console.log('验证码不对')
