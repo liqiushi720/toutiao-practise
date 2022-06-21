@@ -7,7 +7,7 @@ import './styles/index.less'
 // 注册Vant组件
 import Vant from 'vant'
 // 导入Vant的css样式
-import 'vant/lib/index'
+import 'vant/lib/index.css'
 // 导入淘宝flexible
 import 'amfe-flexible'
 Vue.config.productionTip = false
